@@ -1,0 +1,12 @@
+<script type="text/javascript">
+
+</script>
+<form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)">
+
+<p>
+<input name="q" type="hidden" />
+<input name="qfront" type="text" style="width: 180px" /> <input type="submit" value="Search" /><br />
+
+
+</form>
+

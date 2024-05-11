@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title">Login Form</div>
+      <form action="#">
+        <div class="field">
+          <input type="text" required>
+          <label>Email Address</label>
+        </div>
+        <div class="field">
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="pass-link">
+            <a href="#">
+                Forgot your password?
+            </a>
+        </div>
+        <div class="field">
+          <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+      </form>
+    </div>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght300;400;500;600;700&display=swap');
+
+      *{ 
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Alkatra', sans-serif;
+
+        }
+
+        html, body {
+            display: grid;
+            height: 100%;
+            place-items: center;
+            background: gray;
+        }
+        .wrapper {
+            width: 380px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 15px 20p rgba(0,0,0,0.1);
+        }
+        .wrapper .title { 
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 15px 15px 0px 0px;
+            background: linear-gradient(-135deg, #c850c0, #4158d0);
+        }
+        .wrapper form {
+            padding: 10px 30px 50px 30px;
+        }
+        .wrapper form .field {
+            position: relative;
+            height: 50px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .wrapper form .field input {
+            height: 100%;
+            width: 100%;
+            padding-left: 20px;
+            border-radius: 25px;
+            outline: none;
+            font-size: 17px;
+            border: 1px solid lightgrey;
+            transition: all 0.3s ease;
+        }
+        .wrapper form .field input:focus,
+        .wrapper form .field input:valid{
+            border-color: #4158d0;
+        }
+
+
+        .wrapper form .field label {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            font-size: 17px;
+            color: #999;
+            transform: translateY(-50%);
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        .wrapper form .field input:focus ~ label, 
+        .wrapper form .field input:valid ~ label {
+            top: 0%;
+            color: #4158d0;
+            font-size: 16px;
+            background: #fff;
+            transform: translateY(-50%);
+        }
+
+        .wrapper form .field input[type="submit"]{
+            color: #fff;
+            background: linear-gradient(-135deg, #c850c0, #4158d0);
+            font-size: 20px;
+            font-weight: 500;
+            border: none;
+            padding-left: 0px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .wrapper form .field input[type="submit"]:active {
+            transform: scale(0.95);
+        }
+        .wrapper form .pass-link {
+            color: #4158d0;
+            margin: 8px 0 0 10px;
+        } 
+        .wrapper form .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #262626;
+        }
+        .wrapper form .pass-link a,
+        .wrapper form .signup-link a {
+            color: #4158d0;
+            text-decoration: none;
+        }
+        .wrapper form .pass-link a:hover,
+        .wrapper form .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+  </body>
+</html>

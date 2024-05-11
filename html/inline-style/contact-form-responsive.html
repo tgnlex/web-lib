@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Contact</title>
+<head>
+  <body>
+    <header id="top" class="section">
+      <h1 id="page-heading" class="heading">
+        Responsive Contact Form
+      </h1>
+    </header>
+    <main class="container">
+      <div class="contact-box">
+        <div class="left"></div>
+        <div class="right">
+          <h2 id="form-heading" class="heading">Contact Us</h2>
+          <form 
+            id="contact-form" 
+            class="contact-form"
+            method="post"
+            action="localhost:4000/api/contacts/new"
+            target="_blank"
+            >
+            <input 
+              id="name"
+              name="name"
+              class="form-control form-control-name field" 
+              type="text" 
+              placeholder="Your Name"
+              required >
+            <input 
+              id="email" 
+              name="email"
+              class="form-control form-control-email field" 
+              type="email"  
+              placeholder="Your Email"
+              required>
+            <input 
+              id="phone" 
+              name="phone" 
+              class="form-control form-control-phone field" 
+              type="phone" 
+              placeholder="Your Phone [Optional]">
+            <textarea 
+              id="message"
+              name="message"
+              class="form-control-message form-control-text " 
+              placeholder="Send us a message!">
+            </textarea>
+            <button  id="submit-btn" class="btn form-btn form-submit" type="submit">Send</button>
+        </form>
+        </div>
+      </div>
+    </main>
+
+   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            padding: 20px 100px;
+        }
+
+        .container:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: url("img/bg.jpg") no-repeat center;
+            background-size: cover;
+            z-index: -1;
+            filter: blur(50px);
+        }
+
+        .contact-box {
+            max-width: 850px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+            text-align: cener;
+            backgound-color: #fff;
+            box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+        }
+
+        .left{
+            height: 100%;
+            background: url("img/bg.jpg") no-repeat center;
+            background-size: cover;
+        }
+
+        .right {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            position: relative;
+            padding: 0 0 10px;
+            margin-bottom: 10px;
+
+        }
+        h2:after {
+            content: '';
+            position: absolute; 
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50px);
+            height: 4px;
+            width: 50px;
+            border-radius: 2px;
+            background-color: #2ecc71;
+        }
+
+
+        .field{
+            width: 100%; 
+            padding: 0.5rem 1rem;
+            outline: none;
+            border: 2px solid rgba(0, 0, 0, 0);
+            background-color: rgba(230, 230, 230, 0.6);
+            font-size: 1.1rem;
+            margin-bottom: 22px;
+            transition: .3s;
+        }
+
+        .field:hover{
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        textarea { 
+            min-height:150px; 
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #2ecc71;
+            color: #fff;
+            font-size: 1.1rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: .3s;
+        }
+        .btn:hover{
+            background-color: #27ae60;
+        }
+        .contact-form-controls {
+          display: flex;
+        }
+
+
+        .field:focus{
+            background-color: #fff;
+            border: 2px solid rgba(30, 85, 250, 0.47);
+        }
+        .area { 
+        min-height: 150px;
+         }
+
+        @media screen and (max-width: 880px) {
+            .contact-box{
+                grid-template-columns: 1fr;
+            }
+            .left {
+                height: 200px;
+            }
+        }
+   </style>
+  
+
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<div id="data-list" x-data="{
+          search: '',
+          items: ['alex | NEUTRAL', 'andrew | BOY', 'anthony | BOY', 'aria | GIRL', 'arianna | GIRL', 'austin | BOY', 'aviva | GIRL', 
+          'brianna | GIRL', 'brian | BOY', 'beatrice | GIRL', 
+          'charlie | NEUTRAL', 'charlotte | GIRL', 'chase | BOY', 'claire | GIRL', 
+          'daisy | GIRL', 'david | BOY', 'daniel | BOY', 
+          'elizabeth | GIRL', 'emma | GIRL', 'edward | BOY', 
+          'fabian | BOY', 'faith | GIRL', 'faye | GIRL',
+          'hailey | GIRL', 'hannah | GIRL', 'hayden | NEUTRAL', 'harmony | GIRL', 'hunter | BOY', 'harvey | BOY',
+          'isaac | BOY', 'isabelle | GIRL', 'ismael | BOY', 'ivy | GIRL', 
+          'jacob | BOY', 'jenna | GIRL', 
+          'kathleen | GIRL', 'katrina | GIRL', 'kynzie | GIRL', 
+          'layla | GIRL', 'lily | GIRL', 'lucy | GIRL', 'lucille | BOY',
+          'maria | GIRL', 'mark | BOY', 'matthew | BOY', 'merideth | GIRL', 'meghan | GIRL',
+          'nick | BOY', 'noel | NEUTRAL', 
+          'ophelia | GIRL',
+          'patrick | BOY', 'penelope | GIRL', 'portia | GIRL',
+          'quenton | BOY', 'quinn | NEUTRAL',
+          'rachael | GIRL', 'rose | GIRL',
+          'seth | BOY', 'summer | GIRL',  'schuyler | NEUTRAL', 'stephanie | Girl',
+          'taylor | NEUTRAL', 'tasha | GIRL', 'trevor | BOY', 
+          'ursule | GIRL', 'uziel | BOY', 'umar | BOY',
+          'violet | GIRL', 'victoria | GIRL',
+          'william | BOY',
+          'xavier | BOY'
+          ],
+ 
+          
+
+          get filteredItems() {
+              return this.items.filter(
+                i => i.includes(this.search)
+              )
+            },
+          }"
+        >
+          <input class="search-bar" 
+                 x-model="search" 
+                 placeholder="Search Query..."  />
+          <ul class="list" type="none" >
+            <template class="item-wrapper" x-for="item in filteredItems" :key="item">  
+              <li class="list-item" x-text="item"></li>
+            </template>
+          </ul>
+        </div>
+      
+                             </div>
+  </body>
+</html>

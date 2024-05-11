@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data attributes</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="#app">
+      <article 
+        id="content"
+        data-columns="3"
+        data-index-number="52413"
+        data-parent="tutorials"
+        >
+      </article>
+	<script>
+    const article = document.querySelector("#content") 
+    const article_data = {
+      this.columns = article.dataset.columns;
+      this.indexNum = article.dataset.indexNumber;
+      this.parent = article.dataset.parent  
+    }
+    console.log(article_data.columns)
+    console.log(article_data.indexNum)
+    console.log(article_data.parent)
+  </script>
+  </body>
+</html>

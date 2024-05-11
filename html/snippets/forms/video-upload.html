@@ -1,0 +1,31 @@
+<form id="upload_form" action="file_handler.php" method="post">
+      <h2 id="form-title">Select A Video for upload.</h2>
+      <input 
+        id="video-title" 
+        type="text" 
+        name="title" 
+        placeholder="Title" 
+        required 
+      />
+      <input 
+        id="video" 
+        type="file" 
+        id="video-upload"
+        name="video" 
+        accept="video/mp4, video/mov, video/avi, video/mpg, video/wmv" 
+      />
+      <textarea 
+        id="video-description"
+        class="form-control"
+        type="text" 
+        rows="4"
+        cols="6"
+        name="description" 
+        placeholder="Enter a description for your video" >
+        </textarea>
+      <input 
+        id="submit-btn" 
+        class="btn form-btn" 
+        type="submit" 
+        value="Submit" />
+    </form>

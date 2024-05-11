@@ -1,0 +1,1 @@
+type stringArray =  string[] | null;

@@ -1,0 +1,16 @@
+
+<div id="counter" x-data="{ count: 0 }">
+  <button id="add-1" 
+      x-on:click="count++">
+      Add One
+  </button>
+  <button id="add-10" 
+      x-on:click="count = count + 10">
+          Add Ten
+  </button> 
+  <div id="results" class="output" x-text="count"></div>
+  <button id="reset-btn" class="btn reset-btn" x-on:click="count = 0">
+      Reset
+  </button>
+</div>
+        

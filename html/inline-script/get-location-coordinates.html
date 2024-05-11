@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="container">
+  <h1>Coordinates</h1>
+  <div id="coords">
+    
+  </div>
+  <button id="btn" onclick="getLocation()">Get Coords</button>
+</div>
+  <script>
+    const x = document.querySelector("#coords");
+    const btn = document.querySelector('#btn')
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "<p>Geolocation is not supported by this browser</p>.";
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "<p>Latitude: " + position.coords.latitude +
+      "<br>Longitude: " + position.coords.longitude + "</p>";
+    }
+    </script>
+    <style>
+      
+      .container {
+        display: flex;
+        flex-direction: column;
+        border: 4px solid black;
+        margin-top: 15%;
+        margin-left: 33%;
+        width: 33%;
+        height: 400px;
+        place-items: center;
+        justify-content: center;
+      }
+      #coords {
+        display: flex;
+        border: 3px solid black; 
+        width: 200px;
+        height: 90px;
+        align-content: center;
+        justify-content: center;
+      }
+      #btn {
+        margin-top: 30px;
+      }
+    </style> 
+</body>
+</html>

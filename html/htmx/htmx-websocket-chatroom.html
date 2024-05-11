@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTMX Chatroom</title>
+  <link rel="stylesheet" type="text/css" href="../style/global.css" />  
+  <link rel="stylesheet" type="text/css" href="../style/chat.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+  <script src="https://unpkg.com/htmx.org@1.9.10"  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+</head>
+<body>
+  <div hx-ws="connect:wss:/chatrooom">
+    <div id="chat" class="container">
+        <div id="display">
+            <div id="messages">
+              
+            </div>
+       </div>
+      <form hx-ws="send:submit">
+        <input 
+          id="chat_message" 
+          class="message-input"
+          name="chat_message" 
+          placeholder="Type your message here..." 
+        />
+      </form>
+    </div>
+  </div>
+</body>
+</html>

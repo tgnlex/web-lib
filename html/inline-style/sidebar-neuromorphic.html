@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+      Neuromorphic side-bar
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/959600d529.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="side-bar">
+      <div class="title">
+        <div class="logo">Alex Industries</div>
+        <label class=" button cancel" for="check"><li class="fas fa-times"></ii></label>
+      </div>
+      <ul>
+        <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
+        <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+        <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
+        <li><a href="#"><i class="fas fa-question-circle"></i>About</a></li>
+        <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+        <li><a href="#"><i class="fas fa-phone-volume"></i>Contact</a></li>
+        <li><a href="#"><i class="fas fa-comments"></i>Feedback</a></li>
+      </ul>
+       <div class="media-icons">
+         <a href="#"><i class="fab fa-facebook"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+      }
+      body {
+          background: #ecf0f3;
+      }
+      .side-bar{
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 300px;
+          height: 100vh;
+          background: #ecf0f3;
+          padding: 12px;
+          box-shadow: -3px -3px 7px #ffffff,
+                       3px 3px 5px #ceced1,
+                inset -3px -3px 7px #ffffff,
+                inset  3px 3px 5px #ceced1;
+          transition: all 0.3s ease;
+      }
+      .side-bar .title {
+          display: flex;
+          justify-content: space-evenly;
+      }
+      .side-bar .title .logo {
+          font-size: 27px;
+          font-weight: 600;
+          color: #31344b;
+      }
+      .side-bar ul {
+          margin-top: 35px;
+          list-style: none;
+      }
+      .side-bar ul a {
+          color: #31344b;
+          text-decoration: none;
+          display: block;
+          margin-top: 12px;
+          font-size: 18px;
+          font-weight: 400;
+          padding: 10px 25px;
+          border-radius: 6px;
+          box-shadow: -3px -3px 7px #ffffff,
+                       3px 3px 5px #ceced1;
+          position: relative;
+          transition: all 0.2s ease;
+      }
+      .side-bar ul i {
+          margin-right: 10px;
+      }
+      .media-icons {
+          margin-top: 50px;
+          display: flex;
+          justify-content: center;
+      }
+
+      .media-icons a{
+          position: relative;
+          margin: 0 4px;
+          font-size: 17px;
+          cursor: pointer;
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 40px;
+          text-decoration: none;
+          box-shadow: -3px -3px 7px #ffffff,
+                       3px 3px 5px #ceced1;
+            transition: all 0.3s ease;
+      }
+      .side-bar ul a:hover:before,
+      .media-icons a:hover:before{
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          box-shadow: inset -3px -3px 7px #ffffff,
+                      inset  3px  3px 5px #ceced1;
+      }
+      .side-bar ul a:hover:before{
+          border-radius: 6px;
+      }
+      .media-icons a:hover:before{
+          border-radius: 50%;
+      }\\
+      .side-bar ul a:hover {
+          color: #3498db;
+      }
+
+      .media-icons a:nth-child(1){
+          color: #4267b2;
+      }
+
+      .media-icons a:nth-child(2){
+          color: #1da1f2;
+      }
+      .media-icons a:nth-child(3){
+          color: #e1306c;
+      }
+      .media-icons a:nth-child(4){
+          color: #ff0000;
+      }
+      label{
+          font-size: 17px;
+          color: #31344b;
+          box-shadow: -3px 3px 7px #ffffff,
+                       3px 3px 5px #ceced1;
+          height: 37px;
+          width: 37px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 37px;
+          cursor: pointer;
+          transition: all 0.3s; ease;
+      }
+      label:hover {
+        box-shadow: inset -3px -3px 7px #ffffff,
+                    inset  3px  3px 5px #ceced1;
+        color: #3498db;
+      }
+      #check{
+          display: none;
+      }
+      .bars{
+          position: absolute;
+          left: 15px;
+          top: 15px;
+      }
+      #check:checked ~ .side-bar{
+          left: 0;
+      }
+        </style>
+      </body>
+    </html>

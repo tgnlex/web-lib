@@ -1,0 +1,18 @@
+<users>
+  <user>
+    <personal>
+      <name>
+        <prefix>Mr.</prefix>
+        <first>Anon</first>
+        <last>West</last>
+      </name>
+      <age>28</age>
+    </personal>
+    <account>      
+      <email>sample_data@gmail.com</email>
+      <username>anonwest22</username>
+      <password>root</password>
+      <type>Basic</type>
+    </account>
+  </user>
+</users>

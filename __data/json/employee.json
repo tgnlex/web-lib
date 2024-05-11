@@ -1,0 +1,23 @@
+{
+  "employee": {
+    "identification-data":{
+      "id": 76,
+      "name": "Alex",
+      "age": 25,
+      "gender": "Male",
+      "religion": "Islam",
+      "marital-info": {
+        "status": "Other",
+        "specify-other": "Extra-judicial Marriage Contract [Overseen by religious authorities]."
+      }
+    },
+    "organizational-data":{
+      "salary": 345000,
+      "position": "Director/Administrator",
+      "title": "Director of Backend Developement",
+      "latest-productivity-evaluation-score": 98,
+      "clearance-level": 7,
+      "restrictions": "None"
+    } 
+  }
+}
