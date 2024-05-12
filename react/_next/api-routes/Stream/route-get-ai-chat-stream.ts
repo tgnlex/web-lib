@@ -1,3 +1,4 @@
+import process from 'node';
 // Example: 
 // app/api/chat/route.ts
 import { Configuration, OpenAIApi } from 'openai-edge'

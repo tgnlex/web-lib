@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@use 'sass:string';
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:meta';
+@use 'sass:selector';
+
+
+$font: "Open Sans" sans-serif;
+$text-shadow: 2px 2px 5px black;
+
+@mixin base {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font {
+  font-family: $font;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin square ($size, $radius: 0) {
+  width: $size;
+  height: $size;
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  @mixin flex-col-center {
+    place-items: center;
+    place-content: center;
+  }
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  @mixin flex-row-center {
+    place-items: center;
+    place-content: center;
+  }
+}
+@mixin base-list {
+  @include base;
+  list-style: none;
+}
+@mixin text {
+  @include font;
+  line-height: 1.2;
+  color: black;
+  @mixin text-shadow {
+    text-shadow: $text-shadow;
+  }
+}
+@mixin base-form {
+  @include base;
+  @include flex-col;
+  align-items: center;
+  
+}
+.container {
+	@include flex-col-center;
+	@include base;
+}
+
+.col {
+  @include flex-col;
+}
+
+.row {
+  @include flex-row;
+}
+
+.text {
+  @include text;
+}
+
+.heading {
+  @include text;
+}
+.form {
+  @include form;
+}
+.list {
+  @include basic-list;
+}
+.avatar {
+  @include square(100px, $radius: 4px);
+}

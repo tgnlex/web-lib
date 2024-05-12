@@ -1,0 +1,40 @@
+@mixin base {
+  margin: 0;
+  padding: 0;
+}
+@mixin base-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  line-height: 1.1;
+  color: black;
+  margin: 0;
+}
+@mixin col {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+ 
+} 
+@mixin col-center {
+  @include col;    
+  place-items: center;
+  place-content: center;
+}
+@mixin row-center {
+    @include row;
+    place-items: center;
+    place-content: center;
+  }
+@mixin col-container {
+  @include base;
+  @include col-center;
+}
+@mixin row-container {
+  @include base;
+  @include row-center;
+}

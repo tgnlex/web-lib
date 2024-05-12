@@ -1,0 +1,35 @@
+:root {
+--img: url('./my_picture.jpg');
+--max: 100%;
+--main: rgba(176, 250, 250, 0.8);
+--base: 0;
+}
+html, 
+body {
+  height: var(--max);
+  margin: var(--base);
+  padding: var(--base);
+}
+
+#app { 
+  height: calc(var(--max) * 3); 
+  width: var(--max);
+  margin: var(--base);                                              
+  background-image: var(--img);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#box {  
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background: var(--main);
+  margin-top: 300px;
+  width: calc(var(--max) - 20%);
+  height: 500px;
+  margin-left: 10%;
+}
+

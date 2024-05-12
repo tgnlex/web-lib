@@ -1,0 +1,18 @@
+.flex-col {
+    display: flex; 
+    flex-direction: col;
+};
+.flex-row {
+    display: flex;
+    flex-direction: row
+}
+.eq-col .flex-row-of-equal-cols {
+    display: flex;
+    flex-direction: row;    
+    align-items: stretch;   
+}
+.eq-row .flex-col-of-equal-rows {
+    display: flex;
+    flex-direction: col;
+    align-items: stretch;
+}

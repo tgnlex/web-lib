@@ -1,0 +1,22 @@
+/* Nest circle inside the box for gradient on gradient */
+.box {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-items: center;
+  height: 200px;
+  width: 200px;
+  border-bottom: 10px solid black;
+  border: 2px solid black;
+  background: linear-gradient(to left top, red, blue);
+} 
+
+.circle {
+  height: 75px;
+  width: 75px;
+  border-bottom: 10px solid black;
+  border: 2px solid black;
+  border-radius: 100%;
+  margin-top: 30%;
+  background: linear-gradient(to left top, blue, rgb(10, 232, 20));
+}

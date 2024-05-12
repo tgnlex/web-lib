@@ -1,0 +1,44 @@
+:root {
+  --aria-menu-margin: 0px 0px 0px 0px;
+  --aria-menu-bg: rgba(0, 0, 0, 0);
+  --menu-list-width: 0px;
+  --menu-list-height: 0px;
+  --menu-list-bg: rgba(0, 0, 0, 0);
+}
+
+[aria-controls="menu"] {
+  display: block;
+  margin: var(--aria-menu-margin);
+  background-color: var(--aria-menu-bg);
+}
+[aria-expanded="true"].menu-list {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	width: var(--menu-width);
+	height: var(--menu-height);
+	background-color: var(--menu-list-bg);
+}
+
+[aria-expanded="false"] .menu {
+  display: none;
+}
+
+[aria-expanded="true"] .close-btn {
+	display: inline-block;
+}
+
+[aria-expanded="false"] .close-btn {
+	display: none;
+}
+
+[aria-expanded="true"] .open-btn {
+  display: none;
+}
+
+[aria-expanded="false"] .close-btn {
+  display: inline-block;
+}

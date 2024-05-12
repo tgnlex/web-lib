@@ -1,0 +1,8 @@
+/* Simple animation to scale up when hovered, great for svgs.   */
+.object {
+  transition: transform 0.5s ease-in-out;
+}
+
+.object:hover {
+  transform: scale(1.2);
+}

@@ -1,0 +1,32 @@
+
+.btn {
+  background-image: linear-gradient(top bottom, rgba(250, 240, 250, .9) ,rgba(200, 200, 210, 0.6));
+  border: grooved 1.5px rgba(175, 175, 220, .9);  
+  border-radius: 5px;
+  box-shadow:  rgba(125,125,125, .2) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  height: 4vh;
+  font: Arial, sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.btn:hover,
+.btn:active {
+  border-color: rgba(175, 175, 220, 0.4);
+}
+
+.btn:focus {
+  border-color: #32e700;
+  box-shadow: rgba(121, 228, 178, 0.5) 0 0 3px 2px;
+  outline: 0;
+}

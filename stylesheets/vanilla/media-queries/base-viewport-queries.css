@@ -1,0 +1,10 @@
+// TV and extra large screens
+@media screen and (width >= 1201px) {}
+// Desktops & large screens
+@media screen and  (width <= 1200px) {}
+// Small Screens and Laptops
+@media screen and (width <= 1024px) {}
+// Tablets, & large mobile devices
+@media screen and (width <= 768px) {}
+// Smart Phones and Mobile Devices.
+@media screen and (width <= 599px) {}

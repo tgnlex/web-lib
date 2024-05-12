@@ -1,0 +1,10 @@
+
+.circle {
+  height: 175px;
+  width: 175px;
+  border-bottom: 10px solid black;
+  border: 2px solid black;
+  border-radius: 100%;
+  margin-top: 30%;
+  background: linear-gradient(to left top, blue, rgb(10, 232, 20));
+}

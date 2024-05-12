@@ -1,0 +1,52 @@
+@mixin base {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin font {
+  font-family: $font;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin square ($size, $radius: 0) {
+  width: $size;
+  height: $size;
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  @mixin flex-col-center {
+    place-items: center;
+    place-content: center;
+  }
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  @mixin flex-row-center {
+    place-items: center;
+    place-content: center;
+  }
+}
+@mixin base-list {
+  @include base;
+  list-style: none;
+}
+@mixin text {
+  @include font;
+  line-height: 1.2;
+  color: black;
+  @mixin text-shadow {
+    text-shadow: $text-shadow;
+  }
+}
+@mixin base-form {
+  @include base;
+  @include flex-col;
+  align-items: center;
+  
+}

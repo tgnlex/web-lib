@@ -1,0 +1,15 @@
+.navbar {
+	display: flex;
+	flex-direction: column;
+}
+.nav-list {
+	display: flex;
+	flex-direction: row;
+}
+.nav-item {
+  margin-left: 30px;
+}
+
+.nav-link {
+	text-decoration: none;
+}

@@ -1,10 +1,10 @@
 const legacyPrefixes = ['/docs', '/blog']
- 
-export default async function middleware(req) {
+import NextResponse from 'next/server';
+export default async function middleware(res: NextResponse, req) {
   const { pathname } = req.nextUrl
  
   if (legacyPrefixes.some((prefix) => pathname.startsWith(prefix))) {
-    return NextResponse.next()
+    return res.next()
   }
  
   // apply trailing slash handling
