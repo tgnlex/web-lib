@@ -1,0 +1,13 @@
+// Bubble sort
+sort(list, function = null)
+  if function == null
+    function = @(a, b) {
+      a > b
+    }
+  for $i in 1..length(list) - 1 
+    for $j in 0..$i - 1
+      if fn(list[$j], list[$i])
+        $temp = list[$i]
+        list[$i] = list[$j]
+        list[$j] = $temp
+  return list 

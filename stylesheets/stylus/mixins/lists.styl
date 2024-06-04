@@ -1,0 +1,29 @@
+list-item()
+  p, a, .text, .link
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 1.5;  
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+inline-list()
+  li, .item, 
+    display inline;
+    padding: 0;
+    margin: auto;
+    overflow-y: hidden;  
+    list-item();
+
+comma-list()
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  inline-list()
+  &:after
+    content ', ';
+  &:last-child:after
+    content '';
+
+#list-element
+  comma-list()
