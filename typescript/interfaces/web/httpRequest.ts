@@ -1,19 +1,18 @@
 import type {HTTPHeaders} from './httpHeaders';
 import {Cookies} from './cookie';
-export type HTTPMethod = string 
-  | "GET" 
-  | "POST" 
-  | "PUT" 
-  | "PATCH" 
-  | "DELETE"
-  | "TRACE"
-  | "HEAD";
-
-
+export enum RequestMethod {
+GET "GET", 
+POST "POST", 
+PUT "PUT",
+PATCH "PATCH", 
+DELETE "DELETE",
+TRACE "TRACE",
+HEAD "HEAD",
+}
 
 export interface HTTPRequest {
   url: URL;
-  method: HTTPMethod;
+  method: RequestMethod;
   headers?: HTTPHeaders; 
   cookies?: Cookies;  
   data?: any;
