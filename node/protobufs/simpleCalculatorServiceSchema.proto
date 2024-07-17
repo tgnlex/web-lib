@@ -1,0 +1,27 @@
+// Format Declaration
+syntax = "proto3";
+// Name of Service
+package calculator;
+// Where the package will go
+option go_package = "./proto";
+// Service Actions
+service Calculator {
+  rpc Add(CalculatorRequest) returns (CalculationResponse);
+  rpc Subtract(CalculatorRequest) returns (CalculationResponse);
+  rpc Multiply(CalculatorRequest) returns (CalculationResponse);
+  rpc Divide(CalculatorRequest) returns (CalculationResponse);
+  rpc Sum(CalculatorRequest) returns (CalculationResponse);
+}
+// Request Type 1 [Calculation]
+message CalculationRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+// Request Type 2 [Numbers]
+message NumbersRequest { 
+  repeated int32 numbers = 1; 
+}
+// Response Type
+message CalculationResponse { 
+  int32 result = 1; 
+}

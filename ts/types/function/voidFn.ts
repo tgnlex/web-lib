@@ -1,1 +1,0 @@
-type voidFunc = () => void;
